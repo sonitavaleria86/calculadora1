@@ -1,4 +1,4 @@
-from operaciones import suma, resta, multiplicacion, division
+from operaciones import suma, resta, multiplicacion, division, potencia
 
 def menu():
     """
@@ -10,15 +10,16 @@ def menu():
         print("Presione 2 si desea realizar una: RESTA")
         print("Presione 3 si desea realizar una: MULTIPLICACION")
         print("Presione 4 si desea realizar una: DIVISION")
-        print("Presione 5 si desea SALIR del programa")
+        print("Presione 5 si desea realizar una: POTENCIA")
+        print("Presione 6 si desea SALIR del programa")
 
-        opcion = input("Seleccione una opcion del 1 al 5: ")
+        opcion = input("Seleccione una opcion del 1 al 6: ")
 
-        if opcion == "5":
+        if opcion == "6":
             print("Saleindo de calculadora...")
             break
 
-        if opcion not in ["1", "2", "3", "4"]:
+        if opcion not in ["1", "2", "3", "4", "5"]:
             print("\n --AVISO: La opcion seleccionada NO EXISTE:")
             print("Vuelva a intentar con una opcion del 1 al 5--")
             continue
@@ -41,6 +42,8 @@ def menu():
             print("Resultado:", multiplicacion(a, b))
         elif opcion == "4":
             print("Resultado:", division(a, b))
+        elif opcion == "5":
+            print("Resultado:", potencia(a, b))
 
 
 # Llama al menú
