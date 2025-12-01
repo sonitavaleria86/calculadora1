@@ -1,8 +1,33 @@
+'''Archivo principal de la calculadora. 
+
+Este módulo implementa un menú interactivo que permite al usuario seleccionar distintas operaciones aritméticas básicas:
+suma, resta, multiplicación división, potencia y módulo. Las funciones de operación se importan desde el módulo operaciones
+y se ejecutan de acuerdo con la selección del usuario.
+
+El programa valida entradas numéricas y opciones del menú, mostrando mensajes claros en caso de errores.'''
 from operaciones import suma, resta, multiplicacion, division, potencia, modulo
 
 def menu():
     """
-    Muestra al usuario la operacion que desea realizar.
+    Muestra un menú interactivo para seleccionar y ejecutar operaciones aritméticas.
+    
+    Este menú se ejecuta en un ciclo infinito hasta que el usuario seleccione la opción para salir (opción 7). 
+    El programa valida tanto la opción elegida como las entradas numéricas proporcionadas por el usuario.
+    
+    Flujo del menú:
+    1. Suma
+    2. Resta
+    3. Multiplicación
+    4. División.
+    5. Potencia
+    6. Módulo
+    7. Salir del programa
+
+    Manejo de errores:
+    -Si el usuario ingresa una opción inválida, se muestra un mensaje y se reinicia el menú.
+    -Si los valores ingresados no son numéricos, se muestra un mensaje y se solicita nuevamente la entrada.
+
+    No retorna valores. Únicamente imprime resultados en pantalla. 
     """
     while True:
         print("\n Calculadora de Operaciones Basicas")
@@ -17,7 +42,7 @@ def menu():
         '''Solicita al usuario la eleccion de una opcion'''
         opcion = input("Seleccione una opcion del 1 al 7: ")
 
-        '''Si el usuario eligio la opcion 5, el programa se cierra'''
+        '''Si el usuario eligio la opcion 7, el programa se cierra'''
         if opcion == "7":
             print("Saleindo de calculadora...")
             break
@@ -29,7 +54,7 @@ def menu():
             continue
 
 
-        # El programa captura los valores de a(flotante) y b(flotante) que proporciono el usuario
+        # El programa captura los valores de a(flotante) y b(flotante) que proporciona el usuario
         try:
             '''El usuario ingresa los valores (a y b)'''
             a = float(input("Ingresa el primer valor: "))
@@ -40,7 +65,7 @@ def menu():
             print("Intenta con un valor de tipo FLOTANTE--")
             continue
 
-# Operaciones 
+# Ejecutar la operación seleccionada 
         '''Si el usuario selecciona la opcion 1, entonces el programa realiza una suma'''
 
 #Si el usuario selecciona la opcion 1, entonces el programa realiza una suma
@@ -63,6 +88,6 @@ def menu():
             print("Resultado:", modulo(a, b))
 
 
-# Llama al menú
+# Bloque de ejecución principal: llama al menú
 if __name__ == "__main__":
     menu()
