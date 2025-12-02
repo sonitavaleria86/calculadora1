@@ -50,7 +50,7 @@ def menu():
             '''Si el usuario elige una opcion diferente a las mostradas en el menu: se imprime un aviso'''
         if opcion not in ["1", "2", "3", "4", "5", "6"]:
             print("\n --AVISO: La opcion seleccionada NO EXISTE:")
-            print("Vuelva a intentar con una opcion del 1 al 5--")
+            print("Vuelva a intentar con una opcion del 1 al 7--")
             continue
 
 
