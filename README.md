@@ -24,7 +24,7 @@ Ingrésalos ...
 ## Operación
 
 Se va a desplegar este menu con operaciones, si quiere salir
-presiona 5.
+presiona 7.
 
 Calculadora de Operaciones Basicas
 Presione 1 si desea realizar una: SUMA"
@@ -40,17 +40,17 @@ Presiones 7 si desea SALIR del programa"
  Si el usuario elige una opcion diferente a las mostradas en el menu; se imprime:
 
 
-   **Vuelva a intentar con una opcion del 1 al 5--**
+   **Vuelva a intentar con una opcion del 1 al 7--**
 
 ## Ejecución del programa:
 1 Clonar el repositorio:
 git clone https://github.com/sonitavaleria86/calculadora1.git
 
 2 Entrar a la carpeta
-cd calculadora1/src
+cd ../calculadora1/src
 
 3 Ejecutar la calculadora:
-python main.py
+python3 main.py
 
 ## Trabajo colaborativo
 Cada miembro del equipo trabajó en una rama independiente:
