@@ -1,17 +1,17 @@
 '''Archivo principal de la calculadora. 
 
 Este módulo implementa un menú interactivo que permite al usuario seleccionar distintas operaciones aritméticas básicas:
-suma, resta, multiplicación división, potencia y módulo. Las funciones de operación se importan desde el módulo operaciones
+suma, resta, multiplicación división, potencia, módulo y raiz cuadrada. Las funciones de operación se importan desde el módulo operaciones
 y se ejecutan de acuerdo con la selección del usuario.
 
 El programa valida entradas numéricas y opciones del menú, mostrando mensajes claros en caso de errores.'''
-from operaciones import suma, resta, multiplicacion, division, potencia, modulo
+from operaciones import suma, resta, multiplicacion, division, potencia, modulo, raiz
 
 def menu():
     """
     Muestra un menú interactivo para seleccionar y ejecutar operaciones aritméticas.
     
-    Este menú se ejecuta en un ciclo infinito hasta que el usuario seleccione la opción para salir (opción 7). 
+    Este menú se ejecuta en un ciclo infinito hasta que el usuario seleccione la opción para salir (opción 8). 
     El programa valida tanto la opción elegida como las entradas numéricas proporcionadas por el usuario.
     
     Flujo del menú:
@@ -21,7 +21,8 @@ def menu():
     4. División.
     5. Potencia
     6. Módulo
-    7. Salir del programa
+    7. Raiz cuadrada
+    8. Salir del programa
 
     Manejo de errores:
     -Si el usuario ingresa una opción inválida, se muestra un mensaje y se reinicia el menú.
@@ -37,29 +38,34 @@ def menu():
         print("Presione 4 si desea realizar una: DIVISION")
         print("Presione 5 si desea realizar una: POTENCIA")
         print("Presione 6 si desea realizar un: MODULO")
-        print("Presione 7 si desea SALIR del programa")
+        print("Presione 7 si desea realizar una: RAIZ CUADRADA")
+        print("Presione 8 si desea SALIR del programa")
 
         '''Solicita al usuario la eleccion de una opcion'''
-        opcion = input("Seleccione una opcion del 1 al 7: ")
+        opcion = input("Seleccione una opcion del 1 al 8: ")
 
-        '''Si el usuario eligio la opcion 7, el programa se cierra'''
-        if opcion == "7":
+        '''Si el usuario eligio la opcion 8, el programa se cierra'''
+        if opcion == "8":
             print("Saleindo de calculadora...")
             break
         
             '''Si el usuario elige una opcion diferente a las mostradas en el menu: se imprime un aviso'''
-        if opcion not in ["1", "2", "3", "4", "5", "6"]:
+        if opcion not in ["1", "2", "3", "4", "5", "6", "7"]:
             print("\n --AVISO: La opcion seleccionada NO EXISTE:")
-            print("Vuelva a intentar con una opcion del 1 al 7--")
+            print("Vuelva a intentar con una opcion del 1 al 8--")
             continue
 
 
         # El programa captura los valores de a(flotante) y b(flotante) que proporciona el usuario
         try:
-            '''El usuario ingresa los valores (a y b)'''
-            a = float(input("Ingresa el primer valor: "))
-            b = float(input("Ingresa el segundo valor: "))
-            '''Si el usuario no ingresa un numero de manera correcta. El programa imprime un aviso'''
+            if opcion == "7":
+                a = float(input("ingresa el numero para obtener su raiz cuadrada: "))
+                b = None #Se ignora b
+            else:
+            #El usuario ingresa los valores (a y b) para las demas opciones
+                a = float(input("Ingresa el primer valor: "))
+                b = float(input("Ingresa el segundo valor: "))
+            #Si el usuario no ingresa un numero de manera correcta. El programa imprime un aviso
         except ValueError:
             print("\n --Error: Alguno o algunos de los valores que ingresaste no es valido")
             print("Intenta con un valor de tipo FLOTANTE--")
@@ -86,6 +92,9 @@ def menu():
  #Si el usuario selecciona la opcion 6, entonces el programa obtiene el modulo de un numero
         elif opcion == "6":
             print("Resultado:", modulo(a, b))
+ #Si el usuario selecciona la opcion 7, entonces el programa obtiene la raiz cuadrada de un numero
+        elif opcion == "7":
+            print("Resultado:", raiz(a))
 
 
 # Bloque de ejecución principal: llama al menú

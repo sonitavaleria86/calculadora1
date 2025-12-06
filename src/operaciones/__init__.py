@@ -4,3 +4,4 @@ from .multiplicacion import multiplicacion
 from .division import division
 from .potencia import potencia
 from .modulo import modulo
+from .raiz import raiz
