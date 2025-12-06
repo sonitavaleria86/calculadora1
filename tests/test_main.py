@@ -1,5 +1,3 @@
-# test_main_simple.py
-
 from src.operaciones import suma, resta, multiplicacion, division, potencia, modulo, raiz
 
 def test_operacion_suma():
