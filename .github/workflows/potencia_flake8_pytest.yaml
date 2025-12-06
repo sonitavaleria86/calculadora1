@@ -6,7 +6,7 @@ name: potencia_flake8 + pytest
 on:
   # Si hacemos push desde rama "potencia" -> inicia workflow
   push:
-    branches: [potencia]
+    branches: [ potencia] 
   # Si hacemos pull request hacia main -> inicia workflow  
   pull_request:
     branches: [ main ]
