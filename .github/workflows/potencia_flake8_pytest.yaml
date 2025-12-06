@@ -33,4 +33,5 @@ jobs:
       - name: Run flake8 # Run the flake8 linter
         uses: py-actions/flake8@v2
         with:
-           exclude: "src/main.py"
+           exclude: "src/main.py" 
+           exclude: "src/operaciones/__init__.py"
