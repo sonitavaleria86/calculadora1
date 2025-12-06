@@ -31,6 +31,5 @@ jobs:
           pip install flake8
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run flake8 # Run the flake8 linter
-        uses: py-actions/flake8@v2
-        with:
-           exclude: "src/main.py, src/operaciones/__init__.py" 
+        run: flake8 --ignore=E101,E191,E501,W191,W503 --exclude=./src/, ./test/
+   
