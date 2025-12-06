@@ -33,7 +33,7 @@ jobs:
       - name: Run flake8 # Run the flake8 linter
         run: |
           # ignore errors
-          flake8 --ignore=E1,E23,W503,F403,F401,E402,E501,E302,E303, ./src/main.py ./src/operaciones/__init__.py ./src/operaciones/division.py ./src/operaciones/modulo.py ./src/operaciones/multiplicacion.py ./src/operaciones/potencia.py ./src/operaciones/raiz.py ./src/operaciones/resta.py ./src/operaciones/suma.py
+          flake8 --ignore=E1,E23,W503,F403,F401,E402,E501,E302,E303 ./src/main.py ./src/operaciones/__init__.py ./src/operaciones/division.py ./src/operaciones/modulo.py ./src/operaciones/multiplicacion.py ./src/operaciones/potencia.py ./src/operaciones/raiz.py ./src/operaciones/resta.py ./src/operaciones/suma.py
           # stop the build if there are Python syntax errors or undefined names
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
