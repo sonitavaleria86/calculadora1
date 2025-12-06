@@ -55,6 +55,6 @@ jobs:
     
     - name: Test with pytest
       run: |
-        pytest tests/potencia -v
-        pytest tests/suma -v
+        pytest tests/test_potencia -v
+        pytest tests/test_suma -v
    
