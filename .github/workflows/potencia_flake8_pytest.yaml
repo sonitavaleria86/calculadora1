@@ -33,7 +33,7 @@ jobs:
       - name: Run flake8 # Run the flake8 linter
         run: flake8 --ignore=E101,E191,E501,W191,W503,E302,E231,W292,W291,E226  --exclude=./src/, ./tests/
 
-pytest:
+  pytest:
     needs: flake8-lint # Depends on previous job
     # The type of runner that the job will run on
     runs-on: ubuntu-latest # Run the job on the latest Ubuntu version
