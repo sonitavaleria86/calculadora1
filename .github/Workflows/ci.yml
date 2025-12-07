@@ -1,3 +1,4 @@
+#Activating workflow
 name: CI - Lint and Tests
 
 on:
