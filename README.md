@@ -69,3 +69,5 @@ Proceso realizado:
 5 Generó un Pull Request
 6 Los compañeros revisaron y aprobaron los PRs
 7 Tras la aprobación, se hizo merge hacia main
+
+### Prueba acutlización
